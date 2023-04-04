@@ -1,4 +1,4 @@
-package com.example.tap_shop
+package com.example.tap_shop.utils
 
 import android.graphics.Rect
 import android.view.View

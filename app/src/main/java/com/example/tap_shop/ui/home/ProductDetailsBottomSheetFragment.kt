@@ -16,7 +16,6 @@ class ProductDetailsBottomSheetFragment : BottomSheetDialogFragment() {
     private var count: Int = 0
     private var updatePrice: Float = 0F
     private val viewModel by activityViewModels<HomeViewModel>()
-//    private val progressDialog by unsafeLazy { DialogLoader (requireContext()) }
     @SuppressLint("SetTextI18n")
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog

@@ -1,4 +1,4 @@
-package com.example.tap_shop
+package com.example.tap_shop.utils
 
 import android.util.Log
 import androidx.annotation.MainThread

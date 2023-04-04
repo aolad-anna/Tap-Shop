@@ -2,7 +2,7 @@ package com.example.tap_shop.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.tap_shop.SingleLiveEvent
+import com.example.tap_shop.utils.SingleLiveEvent
 import com.example.tap_shop.model.response.GetAllCategories
 import com.example.tap_shop.model.response.GetProduct
 import com.example.tap_shop.network.ApiClient

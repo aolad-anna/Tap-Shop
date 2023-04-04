@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.tap_shop.R
-import com.example.tap_shop.TopSpacingItemDecoration
+import com.example.tap_shop.utils.TopSpacingItemDecoration
 import com.example.tap_shop.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
