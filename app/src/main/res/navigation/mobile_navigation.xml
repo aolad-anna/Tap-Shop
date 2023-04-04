@@ -32,5 +32,5 @@
     <dialog
         android:id="@+id/categoryBottomSheetDialog"
         android:name="com.example.tap_shop.ui.home.ProductDetailsBottomSheetFragment"
-        tools:layout="@layout/bottom_sheet_dialog"/>
+        tools:layout="@layout/product_details_bottom_sheet_dialog"/>
 </navigation>
