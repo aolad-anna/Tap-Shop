@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.tap_shop.R
 import com.example.tap_shop.TopSpacingItemDecoration
 import com.example.tap_shop.databinding.FragmentCategoryWiseAllProductBinding
 
@@ -70,6 +71,10 @@ class CategoryWiseAllProductFragment : Fragment() {
         id = arguments?.getString("id")
         viewModel.getProducts.observe(viewLifecycleOwner, Observer {
             if (it != null) {
+                binding.recyclerview.visibility = View.VISIBLE
+                binding.loader.visibility = View.GONE
+                binding.header.visibility = View.VISIBLE
+                binding.title.text = it[0].category?.name
                 binding.recyclerview.apply {
                     setHasFixedSize(true)
                     layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)
@@ -81,7 +86,7 @@ class CategoryWiseAllProductFragment : Fragment() {
 
                     allCategoryWiseProductAdapter.onItemClicked = {
                         viewModel.selectedProducts = it
-//                        findNavController().navigate(R.id.songBottomSheetDialog)
+                        findNavController().navigate(R.id.categoryBottomSheetDialog)
                     }
                     return@Observer
                 }

@@ -38,9 +38,9 @@ class HomeFragment : Fragment() {
     private fun getGetAllCategoriesList() {
         viewModel.getAllCategories.observe(viewLifecycleOwner, Observer {
             if (it != null) {
-//                val songPlaceHolder = activity?.findViewById<View>(R.id.songPlaceHolder)
-//                songPlaceHolder?.visibility=View.GONE
-//                binding.songAllGridSection.visibility = View.VISIBLE
+                binding.recyclerview.visibility = View.VISIBLE
+                binding.loader.visibility = View.GONE
+                binding.header.visibility = View.VISIBLE
                 binding.recyclerview.apply {
                     setHasFixedSize(true)
                     layoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)

@@ -28,4 +28,9 @@
         android:name="com.example.tap_shop.ui.home.CategoryWiseAllProductFragment"
         android:label="All Product"
         tools:layout="@layout/fragment_category_wise_all_product" />
+
+    <dialog
+        android:id="@+id/categoryBottomSheetDialog"
+        android:name="com.example.tap_shop.ui.home.ProductDetailsBottomSheetFragment"
+        tools:layout="@layout/bottom_sheet_dialog"/>
 </navigation>
