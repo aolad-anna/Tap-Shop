@@ -24,10 +24,6 @@ class   AllCategoryRecyclerAdapter: ListAdapter<GetAllCategories, AllCategoryRec
         }
     }
 
-//    override fun getItemCount(): Int {
-//        return 5
-//    }
-
     var onItemClicked: (GetAllCategories) -> Unit = {}
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

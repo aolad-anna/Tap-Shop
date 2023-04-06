@@ -25,10 +25,6 @@ class   CategoryWiseProductRecyclerAdapter: ListAdapter<GetProduct, CategoryWise
         }
     }
 
-//    override fun getItemCount(): Int {
-//        return 5
-//    }
-
     var onItemClicked: (GetProduct) -> Unit = {}
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

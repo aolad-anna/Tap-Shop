@@ -20,9 +20,9 @@ import java.util.*
 
 class ProfileFragment : Fragment() {
 
-    val REQUEST_IMAGE_CAPTURE   = 1
-    val GALLERY_REQUEST  = 188
-    val MY_CAMERA_PERMISSION_CODE   = 100
+    private val REQUEST_IMAGE_CAPTURE   = 1
+    private val GALLERY_REQUEST  = 188
+    private val MY_CAMERA_PERMISSION_CODE   = 100
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
