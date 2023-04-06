@@ -44,7 +44,7 @@ class HomeFragment : Fragment() {
                 binding.recyclerview.apply {
                     setHasFixedSize(true)
                     layoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
-                    val topSpacingDecorator = TopSpacingItemDecoration(5)
+                    val topSpacingDecorator = TopSpacingItemDecoration(20)
                     addItemDecoration(topSpacingDecorator)
                     allCategoryAdapter = AllCategoryRecyclerAdapter()
                     adapter = allCategoryAdapter

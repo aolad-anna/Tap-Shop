@@ -25,14 +25,14 @@
             app:cardCornerRadius="10dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:layout_weight="1"
-            app:strokeWidth="2dp"
+            app:strokeWidth="1dp"
             app:strokeColor="#FF5722">
 
             <ImageView
                 android:id="@+id/imageSongs"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 tools:layout_conversion_absoluteHeight="80dp"
                 tools:layout_conversion_absoluteWidth="80dp"
                 tools:layout_editor_absoluteX="10dp"

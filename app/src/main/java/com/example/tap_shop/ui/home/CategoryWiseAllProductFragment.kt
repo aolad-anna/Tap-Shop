@@ -16,12 +16,6 @@ import com.example.tap_shop.databinding.FragmentCategoryWiseAllProductBinding
 
 
 class CategoryWiseAllProductFragment : Fragment() {
-    var isScrolling = false
-    var isScrollingAPi = true
-    var currentItems = 0
-    var totalItems:Int = 0
-    var scrollOutItems:Int = 0
-    var pageNumber :Int= 0
     private var id: String? = null
     private lateinit var allCategoryWiseProductAdapter: CategoryWiseProductRecyclerAdapter
     private val viewModel by activityViewModels<HomeViewModel>()
@@ -39,33 +33,10 @@ class CategoryWiseAllProductFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        allSongsList()
-
-//        binding.recyclerview.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-//            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-//                super.onScrollStateChanged(recyclerView, newState)
-//                if (newState == AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL) {
-//                    isScrolling = true
-//                }
-//            }
-//
-//            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-//                super.onScrolled(recyclerView, dx, dy)
-//                currentItems = recyclerView.layoutManager!!.childCount
-//                totalItems = recyclerView.layoutManager!!.itemCount
-//                scrollOutItems = (recyclerView.layoutManager!! as GridLayoutManager).findFirstVisibleItemPosition()
-//                if (isScrolling && currentItems + scrollOutItems == totalItems) {
-//                    if (isScrollingAPi) {
-//                        isScrolling = false
-//                        pageNumber++
-//                        viewModel.allSongsApiCall(pageNumber)
-//                    }
-//                }
-//            }
-//        })
+        allProductsList()
     }
 
-    private fun allSongsList() {
+    private fun allProductsList() {
         id = arguments?.getString("id")
         viewModel.getProducts.observe(viewLifecycleOwner, Observer {
             if (it != null) {
@@ -76,7 +47,7 @@ class CategoryWiseAllProductFragment : Fragment() {
                 binding.recyclerview.apply {
                     setHasFixedSize(true)
                     layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)
-                    val topSpacingDecorator = TopSpacingItemDecoration(10)
+                    val topSpacingDecorator = TopSpacingItemDecoration(20)
                     addItemDecoration(topSpacingDecorator)
                     allCategoryWiseProductAdapter = CategoryWiseProductRecyclerAdapter()
                     adapter = allCategoryWiseProductAdapter
